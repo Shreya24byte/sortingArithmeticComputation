@@ -31,6 +31,10 @@ echo "Computation results dictionary:" ${result[@]};
 declare -a array
 for computation in ${result[@]};
 do
-array+=( $computation );
+	array+=( $computation );
 done
 echo "Computation results array:" ${array[@]};
+
+#Sort results in descending order
+Descending=$(printf '%s\n' "${array[@]}" | sort -n -r );
+echo "Computation results in descending order:" $Descending;
