@@ -38,3 +38,7 @@ echo "Computation results array:" ${array[@]};
 #Sort results in descending order
 Descending=$(printf '%s\n' "${array[@]}" | sort -n -r );
 echo "Computation results in descending order:" $Descending;
+
+#Sort results in ascending order
+Ascending=$(printf '%s\n' "${array[@]}"| sort -n);
+echo "Computation results in ascending order:" $Ascending;
