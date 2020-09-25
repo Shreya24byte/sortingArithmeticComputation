@@ -18,3 +18,11 @@ echo "c+a/b =" $computation3;
 
 computation4=$(($num1 % $num2 + $num3));
 echo "a%b+c =" $computation4;
+
+#Dictionary to store results
+declare -A result
+result[computation1]=$computation1;
+result[computation2]=$computation2;
+result[computation3]=$computation3;
+result[computation4]=$computation4;
+echo "Computation results:" ${result[@]};
