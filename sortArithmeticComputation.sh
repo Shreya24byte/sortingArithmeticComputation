@@ -25,4 +25,12 @@ result[computation1]=$computation1;
 result[computation2]=$computation2;
 result[computation3]=$computation3;
 result[computation4]=$computation4;
-echo "Computation results:" ${result[@]};
+echo "Computation results dictionary:" ${result[@]};
+
+#Array to store results
+declare -a array
+for computation in ${result[@]};
+do
+array+=( $computation );
+done
+echo "Computation results array:" ${array[@]};
